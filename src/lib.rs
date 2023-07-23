@@ -7,10 +7,9 @@ const LIC_SETTINGS_PREFIX: &str = "[LicSettings]";
 const TABLE_COLS_PREFIX: &str = "[TableCols]";
 
 #[derive(Debug, Clone)]
-#[allow(dead_code)]
 pub struct File {
-    general_settings: Option<GeneralSettings>,
-    flight_logs: Vec<FlightLog>,
+    pub general_settings: Option<GeneralSettings>,
+    pub flight_logs: Vec<FlightLog>,
 }
 
 impl File {
@@ -55,12 +54,11 @@ impl FromStr for File {
 }
 
 #[derive(Debug, Clone)]
-#[allow(dead_code)]
 pub struct GeneralSettings {
-    name: String,
-    road: String,
-    location: String,
-    pilot_name: String,
+    pub name: String,
+    pub road: String,
+    pub location: String,
+    pub pilot_name: String,
 }
 
 impl FromStr for GeneralSettings {
@@ -78,24 +76,23 @@ impl FromStr for GeneralSettings {
 }
 
 #[derive(Debug, Clone)]
-#[allow(dead_code)]
 pub struct FlightLog {
-    title: String,
-    license_settings: LicenseSettings,
-    aircraft_ids: Vec<String>,
-    aircraft_types: Vec<String>,
-    copilots: Vec<String>,
-    locations: Vec<String>,
-    column_widths: Vec<String>,
-    time_categories: Vec<String>,
-    categories: Vec<String>,
-    contest_categories: Vec<String>,
-    license_categories: Vec<String>,
-    license_time_categories: Vec<String>,
-    license_dates: Vec<String>,
-    acc_licenses: Vec<String>,
-    opt_conditions: Vec<String>,
-    flights: Vec<Flight>,
+    pub title: String,
+    pub license_settings: LicenseSettings,
+    pub aircraft_ids: Vec<String>,
+    pub aircraft_types: Vec<String>,
+    pub copilots: Vec<String>,
+    pub locations: Vec<String>,
+    pub column_widths: Vec<String>,
+    pub time_categories: Vec<String>,
+    pub categories: Vec<String>,
+    pub contest_categories: Vec<String>,
+    pub license_categories: Vec<String>,
+    pub license_time_categories: Vec<String>,
+    pub license_dates: Vec<String>,
+    pub acc_licenses: Vec<String>,
+    pub opt_conditions: Vec<String>,
+    pub flights: Vec<Flight>,
 }
 
 impl FromStr for FlightLog {
@@ -173,13 +170,12 @@ fn find_list(lines: &[&str], prefix: &str) -> Option<Vec<String>> {
 }
 
 #[derive(Debug, Clone)]
-#[allow(dead_code)]
 pub struct LicenseSettings {
-    bf_starts: u32,
-    bf_time: Duration,
-    license_since: Option<Date>,
-    id_prefix: String,
-    distance_unit: String,
+    pub bf_starts: u32,
+    pub bf_time: Duration,
+    pub license_since: Option<Date>,
+    pub id_prefix: String,
+    pub distance_unit: String,
 }
 
 impl FromStr for LicenseSettings {
@@ -215,28 +211,27 @@ impl FromStr for LicenseSettings {
 }
 
 #[derive(Debug, Clone)]
-#[allow(dead_code)]
 pub struct Flight {
-    number: Option<u32>,
-    date: Date,
-    aircraft_type: String,
-    aircraft_id: String,
-    pilot_name: String,
-    copilot_name: String,
-    num_passengers: u8,
-    start_type: String,
-    start_time: Time,
-    landing_time: Time,
-    flight_time: Duration,
-    block_on_time: Option<Time>,
-    block_off_time: Option<Time>,
-    block_time: Option<Duration>,
-    num_landings: u16,
-    start_location: String,
-    landing_location: String,
-    remarks: String,
-    distance: Option<f32>,
-    categories: Vec<String>,
+    pub number: Option<u32>,
+    pub date: Date,
+    pub aircraft_type: String,
+    pub aircraft_id: String,
+    pub pilot_name: String,
+    pub copilot_name: String,
+    pub num_passengers: u8,
+    pub start_type: String,
+    pub start_time: Time,
+    pub landing_time: Time,
+    pub flight_time: Duration,
+    pub block_on_time: Option<Time>,
+    pub block_off_time: Option<Time>,
+    pub block_time: Option<Duration>,
+    pub num_landings: u16,
+    pub start_location: String,
+    pub landing_location: String,
+    pub remarks: String,
+    pub distance: Option<f32>,
+    pub categories: Vec<String>,
 }
 
 fn parse_flights(content: &str) -> Result<Vec<Flight>, Error> {
