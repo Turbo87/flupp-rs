@@ -1,6 +1,9 @@
 [package]
 name = "flupp"
 version = "0.1.0"
+description = "FluPP flight log file reader"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/Turbo87/flupp-rs.git"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
