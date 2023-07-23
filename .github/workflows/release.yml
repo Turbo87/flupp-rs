@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3.0.1
+      - run: cargo publish
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
