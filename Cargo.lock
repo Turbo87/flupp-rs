@@ -37,7 +37,7 @@ dependencies = [
 
 [[package]]
 name = "flupp"
-version = "0.1.2"
+version = "0.1.3"
 dependencies = [
  "encoding_rs",
  "insta",
