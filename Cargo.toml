@@ -10,7 +10,7 @@ edition = "2021"
 
 [dependencies]
 encoding_rs = "0.8.32"
-thiserror = "1.0.40"
+thiserror = "1.0.44"
 time = "0.3.21"
 
 [dev-dependencies]
