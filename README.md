@@ -12,7 +12,7 @@ Usage
 
 ```rust
 fn main() -> Result<(), Box<dyn Error>> {
-    let content = fs::read_to_string("data.fln")?;
+    let content = fs::read_to_string("flugbuch.flu")?;
     let decoded_file: flupp::File = content.parse()?;
     // ...
     Ok(())
