@@ -14,4 +14,4 @@ thiserror = "1.0.58"
 time = "0.3.34"
 
 [dev-dependencies]
-insta = "=1.37.0"
+insta = "=1.38.0"
