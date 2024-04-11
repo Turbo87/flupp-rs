@@ -11,7 +11,7 @@ edition = "2021"
 [dependencies]
 encoding_rs = "0.8.34"
 thiserror = "1.0.58"
-time = "0.3.35"
+time = "0.3.36"
 
 [dev-dependencies]
 insta = "=1.38.0"
